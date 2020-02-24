@@ -1,0 +1,16 @@
+os: linux
+
+sudo: required
+
+services: docker
+
+language: go
+
+jobs:
+  include:
+    - name: "UP"
+      script:
+        - sh scripts/build_and_up.sh
+
+notifications:
+  email: false
